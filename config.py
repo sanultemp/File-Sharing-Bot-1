@@ -2,28 +2,28 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "2128336507:AAHvn-i8qKWUYYsS7zVKEATG-eNUd1hQCcs")
 
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "7469109"))
 
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "4d4023337b8cc46c306af69adb5fc21a")
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001213969888"))
 
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "-1001213969888"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
-START_MSG = os.environ.get("START_MESSAGE", "Привет {firstname}\n\nI помогу создать приватную ссылку на файлы для твоего канала")
+START_MSG = os.environ.get("START_MESSAGE", "Hi, {firstname}\n\nI am Flix Cinema's Requests Bot. 😊")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "2118362497 1606409678 1140699369 1630262415 1834244060 1255474577 1383355894 1870040069").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Ваш список администраторов не содержит допустимых целых чисел.")
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1250450587)
+ADMINS.append(2118362497)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
